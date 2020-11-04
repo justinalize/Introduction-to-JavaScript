@@ -130,7 +130,7 @@ else if (age >= 1 && weight <= 10
         && weight > 5)
   {
   return 0.04*weight;}
-  else if (age >= 1 && weight <= 5        && weight >= 1)
+  else if (age >= 1 && weight <= 5  && weight >= 1)
   {
   return 0.05*weight;}
 
@@ -175,36 +175,33 @@ Use the game function below to do the following:
 function game(user, computer){
   
   if(computer === 0){
-    cp = 'rock';
+    computer = 'rock';
   }   else if(computer === 1){
-    cp = 'paper';
+    computer = 'paper';
   }  else if(computer === 2){
-    cp = 'scissors';
+    computer = 'scissors';
   } 
-  console.log(cp)
-  if ( user === 'rock' && cp === 'scissors')
-    { return "you win!" }  else  if (user ===         'rock' && cp === 'rock')
-    {return 'its a tie'}
-    else {return 'you lose'};
+  console.log(computer)
+  if ( user === 'rock' && computer === 'scissors')
+    { return "you win!" }  
+
+    if ( user === 'paper' && computer === 'rock')
+    { return "you win!" } 
+
+    if ( user === 'scissors' && computer === 'paper')
+    { return "you win!" } 
   
-  
-    if ( user === 'paper' && cp === 'rock')
-    { return "you win!" } else  if (user ===         'paper' && cp === 'paper')
-    {return 'its a tie'}
-    else {return 'you lose'};
-  
-  
-    if ( user === 'scissors' && cp === 'paper')
-    { return "you win!" } else  if (user ===         'scissors' && cp === 'scissors')
-    {return 'its a tie'}
-    else {return 'you lose'};
-  
+   if( user === computer)
+    {
+      return "it's a tie";
+    }
+    else {
+      return 'you lose!'
+    }
 }
   let computer = Math.floor(Math.random() * Math.floor(3));
   
-console.log(game('rock' , computer));
-  
-
+console.log(game( 'rock' , computer));
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
 //Metric Converter 
@@ -236,7 +233,7 @@ function feet(cm){
      return feet;
    }
  console.log(feet(1));
-  }
+  
 
 
 
@@ -276,15 +273,15 @@ Using the grade function below do the following:
 */
 function grade(score) {
   if (score >= 90 ){
-    return 'A';}
+    return 'you got a A';}
 else if (score >= 80 && score < 90)
-    {return 'B'}
+    {return 'you got a B'}
     else if (score >= 70 && score < 80)
-    {return 'C'}
+    {return 'you got a C'}
     else if (score >= 60 && score < 70)
-    {return 'D'}
+    {return 'you got a D'}
     else if (score < 60)
-    {return 'F'}
+    {return 'you got a F'}
     
     
     
